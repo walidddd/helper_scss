@@ -1,0 +1,33 @@
+// Important Colors
+$main-color: #000;
+$second-color: #fff;
+$third-color: #525252;
+$fourth-color: #08548e;
+$bg-color: #1C1C1C;
+$main-shadow: 0 10px 10px 20px #b0b8d617, 10px 10px 15px -5px #b0b8d6;
+$light-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$mid-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$section-width: 70%;
+$greeen-color: #2bc155;
+$red-color: #f35757;
+$main-font: 'Inter', sans-serif;
+$body-color: #1c1c1c;
+$accent-color: #CFCFCF;
+$main-text-color: #000;
+$second-text-color: #fff;
+
+// Flate Colors Not Important
+$flat-green: #00b894;
+
+
+// Assets Root Folder
+$assets-root-folder: '../assets';
+
+// For Layout & Responsive Things
+$responsive-screens: (
+  'xsmall': 675px,
+  'small': 768px,
+  'miduem': 992px,
+  'large': 1400px,
+  'xlarge': 1600px,
+);

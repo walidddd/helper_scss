@@ -1,0 +1,214 @@
+@import "functions";
+@import "mixins";
+@import "variables";
+%btn {
+  font-family: $main-font;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #0000;
+  padding: 10px 20px;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+%img-props {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+%my-layout {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #000;
+}
+%overlay-props {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Classes
+.highlight {
+  color: $main-color;
+}
+
+.main-btn {
+  @include make-button(#fff, #000, "mid", max-content, "width");
+  font-weight: 500;
+  font-family: $main-color;
+  @include res-font-size(14px, 16px, 16px, 18px, 18px);
+  margin-top: 20px;
+}
+
+.secondary-btn {
+  @include make-button(#000, #fff, "mid", max-content, "width");
+  font-weight: 500;
+  font-family: $main-color;
+  @include res-font-size(14px, 16px, 16px, 18px, 18px);
+  margin-top: 20px;
+}
+
+.third-btn {
+  @include make-button(#fff, #000, "mid", max-content, "width");
+  font-weight: 500;
+  font-family: $main-color;
+  @include res-font-size(14px, 16px, 16px, 18px, 18px);
+  margin-top: 20px;
+  border: 1px solid #000;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+/* Flex */
+
+/* spacing */
+.d-none {
+  display: none;
+}
+.md-none {
+  @media (max-width: map-get($responsive-screens, "miduem")) {
+    display: none;
+  }
+}
+.md-block {
+  @media (max-width: map-get($responsive-screens, "miduem")) {
+    display: block;
+  }
+}
+.h-100 {
+  height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+/* spacing */
+
+/* Colors */
+.white {
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+/* Colors */
+
+/* Fonts */
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16{
+  font-size: 16px;
+}
+
+.fs-18{
+  font-size: 18px;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.lh-26{
+  line-height: 26px;
+}
+
+.lh-28{
+  line-height: 28px;
+}
+
+.lh-30{
+  line-height: 30px;
+}
+/* Fonts */
+
+$i: 0;
+@while $i < 50 {
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+  $i: $i + 5;
+}
+
+/*
+   [fonts]
+   .fw-700
+   .fw-400
+   .fs-14
+   .fs-16
+
+   [Colors]
+   .white
+   .black
+*/
